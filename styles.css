@@ -164,6 +164,20 @@ body {
   text-align: center;
   margin-bottom: 15px;
 }
+.skills_info_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills_info_item_header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+.skills_info_item {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
 
 .skills__text {
   color: var(--secondary-text-color);
