@@ -189,7 +189,9 @@ body {
   flex: 1 1 60%;
   margin-right: 50px;
 }
-
+.experiences__company-project-link {
+  text-decoration: none;
+}
 .experiences__header {
   color: var(--secondary-text-color);
   text-align: left;
@@ -227,6 +229,20 @@ body {
   color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
+}
+.experiences__company-project-description {
+  color: var(--secondary-text-color);
+}
+.experiences__company-project-description + p {
+  background-color: var(--text-decoration-color);
+}
+.experiences__company-project-imagesBlock {
+  list-style: none;
+}
+.experiences__company-project-images {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
 .experiences__company-project-responsibilities {
