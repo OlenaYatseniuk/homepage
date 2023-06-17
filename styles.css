@@ -203,6 +203,16 @@ body {
 .skills_info_item {
   color: var(--secondary-text-color);
   padding-left: 20px;
+  list-style: none;
+}
+
+.skills_info_item li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  color: var(--border-color);
 }
 
 .skills__text {
@@ -229,6 +239,8 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+  text-indent: 10px;
+  text-align: justify;
 }
 
 .experiences__company-header-name {
@@ -242,6 +254,9 @@ body {
 .experiences__company-project {
   margin-left: 15px;
   margin-bottom: 25px;
+  text-align: justify;
+  /* background-color: #f6f8faba; */
+  border-radius: 10px;
 }
 
 .experiences__company-project-role {
@@ -255,22 +270,32 @@ body {
   color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
+  width: 200px;
 }
 .experiences__company-project-description {
+  text-indent: 10px;
   color: var(--secondary-text-color);
 }
+.experiences__company-project-description::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
 .experiences__company-project-description + p {
-  background-color: var(--text-decoration-color);
+  padding: 5px;
+  background-color: #cd8fe396;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .experiences__company-project-imagesBlock {
   list-style: none;
 }
-.experiences__company-project-images-item {
+.experiences__company-project-images-item:not(:last-child) {
   margin-bottom: 10px;
 }
 .experiences__company-project-images {
-  width: auto;
-  height: 200px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -325,4 +350,38 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  padding: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
