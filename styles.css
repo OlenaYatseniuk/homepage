@@ -239,6 +239,9 @@ body {
 .experiences__company-project-imagesBlock {
   list-style: none;
 }
+.experiences__company-project-images-item {
+  margin-bottom: 10px;
+}
 .experiences__company-project-images {
   width: auto;
   height: 200px;
