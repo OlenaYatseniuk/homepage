@@ -13,8 +13,8 @@ body {
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #f8ceed;
+  --text-decoration-color: #cc8fe3;
 }
 
 .container {
@@ -38,7 +38,7 @@ body {
 .resume {
   margin: 50px auto;
   border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  box-shadow: 1px 1px 7px 7px var(--border-color);
   padding: 30px 0;
   max-width: 900px;
 }
@@ -89,7 +89,7 @@ body {
 .contact-info__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .contact-info__block--center {
@@ -101,6 +101,7 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -114,8 +115,14 @@ body {
   justify-content: center;
 }
 
+.contact-info__item-icon-wrapper:hover .contact-info__item-icon path {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f8b4ed;
+}
+
 .contact-info__item-icon path {
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info__item-icon {
@@ -124,12 +131,25 @@ body {
 }
 
 .contact-info__avatar {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  border-radius: 5%;
+  width: 250px;
+  height: 300px;
   object-fit: cover;
-  border: 3px solid;
+  border: 2px solid;
   border-color: var(--text-decoration-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.contact-info__avatar:hover {
+  cursor: pointer;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+@media screen and (max-width: 576px) {
+  .contact-info__avatar {
+    height: 250px;
+    width: 200px;
+  }
 }
 
 /* intro and skills styles */
@@ -157,6 +177,12 @@ body {
 .intro_text {
   color: var(--secondary-text-color);
   text-align: justify;
+  text-indent: 10px;
+}
+.intro_text:first-child:first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
 }
 
 .skills__header {
