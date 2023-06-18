@@ -1,5 +1,5 @@
 document
-  .getElementsByClassName("confetti-button")[0]
+  .getElementsByClassName("confetti_button")[0]
   .addEventListener("click", () => {
     confetti();
   });
