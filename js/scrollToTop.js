@@ -1,6 +1,6 @@
 const showOnPx = 100;
-const backToTopButton = document.querySelector(".back_to_top");
-const pageProgressBar = document.querySelector(".progress_bar");
+const backToTopButton = document.querySelector(".back-to-top");
+const pageProgressBar = document.querySelector(".progress-bar");
 
 const scrollContainer = () => {
   return document.documentElement || document.body;
