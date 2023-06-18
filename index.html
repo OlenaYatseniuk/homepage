@@ -1,12 +1,682 @@
 <!DOCTYPE html>
-<html>
+<html lang="En">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Résumé</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </head>
   <body>
-    ― Hello World! &#x1F609;
+    <main>
+      <div class="resume">
+        <div class="container">
+          <div class="resume__block">
+            <h1 class="contact-info__header" id="top">Olena Yatseniuk</h1>
+            <h3 class="contact-info__sub-header">Front-end developer</h3>
+
+            <div class="contact_info_container fh">
+              <div class="contact-info__block contact-info__block--center">
+                <img
+                  class="contact-info__avatar"
+                  src="assets/avatar.jpg"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="contact-info__block">
+                <a
+                  href="https://www.google.com/maps?output=search&q=odesa&entry=mc&sa=X&ved=2ahUKEwik-L2fmMr_AhUKAxAIHUsPB3oQ0pQJegQIBxAB"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      class="contact-info__item-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 384 512"
+                    >
+                      <path
+                        d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>Odesa, Ukraine</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/olena-yatseniuk/"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      class="contact-info__item-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span>My LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/OlenaYatseniuk"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      class="contact-info__item-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"
+                      />
+                    </svg>
+                  </div>
+                  <span>My GitHub</span>
+                </a>
+              </div>
+
+              <div class="contact-info__block">
+                <a
+                  href="tel:+380502937443"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 384 512"
+                      class="contact-info__item-icon"
+                    >
+                      <path
+                        d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM224 448a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM304 64H80V384H304V64z"
+                      />
+                    </svg>
+                  </div>
+                  <span>+380 50 29 37 443</span>
+                </a>
+                <a
+                  href="https://t.me/Hellen_ya"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      class="contact-info__item-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"
+                      />
+                    </svg>
+                  </div>
+                  <span>Telegram</span>
+                </a>
+                <a
+                  href="mailto:elena.yatsenyuk@gmail.com"
+                  rel="author"
+                  class="contact-info__item"
+                  target="_blank"
+                >
+                  <div class="contact-info__item-icon-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                      class="contact-info__item-icon"
+                    >
+                      <path
+                        d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                      />
+                    </svg>
+                  </div>
+                  <span>elena.yatsenyuk@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="resume__block">
+            <div class="intro">
+              <div class="intro__icon-wrapper">
+                <svg
+                  class="intro__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <p class="intro_text">
+                  Hey there, fellow human! I'm an enthusiastic Junior Front-End
+                  Developer on a quest for a full-time remote job. I'm like a
+                  sponge
+                  <iframe
+                    src="https://giphy.com/embed/UvKx67uYWoJAz5k6rs"
+                    width="25"
+                    height="25"
+                    frameborder="0"
+                    class="giphy-embed"
+                    allowfullscreen
+                  ></iframe>
+                  when it comes to learning and expanding my expertise – I can
+                  absorb knowledge faster than a kid with a candy bar &#127853;!
+                </p>
+
+                <p class="intro_text">
+                  Working in a team is my jam, so you can trust me to bring the
+                  party to any coding collaboration. I'm also quite responsible
+                  and won't blame the dog for eating my code &#128054; (even
+                  though we all know it was probably the dog's fault).
+                </p>
+                <p class="intro_text">
+                  Oh, and did I mention I have a superpower
+                  <iframe
+                    src="https://giphy.com/embed/zNrjThkP7ANEs"
+                    width="25"
+                    height="25"
+                    frameborder="0"
+                    class="giphy-embed"
+                    allowfullscreen
+                  ></iframe>
+                  ? I can turn criticism into fuel for my coding superpowers!
+                  So, don't hold back on the feedback – it's like spinach
+                  &#129382; for Popeye, but for my programming skills.
+                </p>
+                <p class="intro_text">
+                  Let's embark on this remote job adventure together and
+                  sprinkle some laughter and good vibes along the way. Ready to
+                  rock? Let's code like nobody's watching – except the boss, of
+                  course!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="resume__block">
+            <div class="skills">
+              <h3 class="skills__header">Skills</h3>
+              <div class="skills_info_container">
+                <div class="skills_info_item_wrapper">
+                  <h4 class="skills_info_item_header">Hard skills:</h4>
+                  <ul class="skills_info_item">
+                    <li>HTML5</li>
+                    <li>CSS3/SASS</li>
+                    <li>GIT</li>
+                    <li>JavaScript</li>
+                    <li>React/Redux</li>
+                    <li>REST API</li>
+                    <li>Webpack</li>
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                    <li>MongoDB</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+                <div class="skills_info_item_wrapper">
+                  <h4 class="skills_info_item_header">Soft skills:</h4>
+                  <ul class="skills_info_item">
+                    <li>Diligent</li>
+                    <li>Hardworking</li>
+                    <li>Organized</li>
+                    <li>Cooperative</li>
+                    <li>Quick learning</li>
+                    <li>Open-minded</li>
+                    <li>Attention to Detail</li>
+                    <li>Time management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="resume__block">
+            <div class="main-info fh">
+              <div class="experiences">
+                <h3 class="experiences__header">Experience</h3>
+                <div class="experiences__company">
+                  <div class="experiences__company-header">
+                    <p class="experiences__company-header-durability">
+                      So, here's the deal: I may not have a ton of formal work
+                      experience under my belt, but let me tell you about my
+                      impressive pet-project &#129412; adventures. <br />Sure, I
+                      might not have battled corporate dragons &#129430; just
+                      yet, but I've wrangled with my fair share of bugs and code
+                      monsters. Trust me, my pet-projects have given me a taste
+                      of what it's like to bring an idea to life, troubleshoot
+                      like a pro, and make a little magic happen &#127752;.
+                    </p>
+                  </div>
+
+                  <div class="experiences__company-project">
+                    <div>
+                      <a
+                        class="experiences__company-project-link"
+                        href="https://stage.edu-streams.org/#/events/123"
+                        target="_blank"
+                      >
+                        <h3 class="experiences__company-project-name">
+                          EDU streams
+                        </h3>
+                      </a>
+                      <p class="experiences__company-project-description">
+                        Alright, folks, gather 'round! We've got an epic team
+                        project on our hands that's going to revolutionize the
+                        way teachers and speakers broadcast their online
+                        streams. Move over, Zoom, because our app is like Zoom
+                        on steroids! Our app is armed with fancy widgets that
+                        Zoom can only dream of having. We're talking about
+                        next-level awesomeness here. Let's read about some of
+                        them: the possibility of grading students or listeners
+                        to understand how they have learned the lecture's
+                        information; picking up listeners' feedback, their
+                        grading to the lecture, and the possibility to ask a
+                        question. You can also see some statistics.
+                        <br />Disclaimer: No actual steroids were used in the
+                        making of our app. We're all about legal coding here,
+                        folks!
+                      </p>
+                      <p>
+                        I worked on an Attendance widget, which can help
+                        speakers to know who and how many students are at the
+                        online stream. For this purpose I used React, MUI, and
+                        socket.io
+                      </p>
+                    </div>
+                    <button class="accordion">Click to see the images</button>
+                    <div class="panel">
+                      <ul class="experiences__company-project-imagesBlock">
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/eduStreamsMain.png"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/eduStreams.png"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/attendance.png"
+                            alt="Photo of Attendance widget"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="experiences__company-project">
+                    <a
+                      class="experiences__company-project-link"
+                      href="https://kidslikes.netlify.app/auth"
+                      target="_blank"
+                    >
+                      <h3 class="experiences__company-project-name">
+                        Kids Likes
+                      </h3>
+                    </a>
+                    <p class="experiences__company-project-description">
+                      Introducing my team project app that turns household
+                      chores into epic adventures for kids! They'll earn points
+                      for their hard work and unlock their ultimate wishes. It's
+                      like a magical currency of awesomeness, transforming
+                      chores into a fun-filled journey towards their dreams. Get
+                      ready for chore time to become the highlight of the day!
+                      Let the adventures begin! Disclaimer: While we can't
+                      guarantee the disappearance of messy bedrooms or
+                      permanently folded laundry, we can promise loads of fun,
+                      giggles, and a sprinkle of household harmony. Side effects
+                      may include contagious enthusiasm and a sudden influx of
+                      chore-requesting kids.
+                    </p>
+                    <p>
+                      Despite the fact that this is a team project, I worked on
+                      it very responsibly, and also helped all other
+                      participants solve their problems. I implemented the
+                      MainPage component, DaysList (a component on the Planning
+                      page, with the help of which you can assign tasks for the
+                      selected day), a large part of Redux (thunks, selectors,
+                      actions).
+                    </p>
+                    <button class="accordion">Click to see the images</button>
+                    <div class="panel">
+                      <ul class="experiences__company-project-imagesBlock">
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/demo1_kidslike.jpg"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/demo2_kidslike.gif"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="experiences__company-project">
+                    <a
+                      class="experiences__company-project-link"
+                      href="https://wallet-app-24.netlify.app/login"
+                      target="_blank"
+                    >
+                      <h3 class="experiences__company-project-name">
+                        Wallet App
+                      </h3>
+                    </a>
+                    <p class="experiences__company-project-description">
+                      Get ready to conquer your financial world with my team
+                      project app! Say goodbye to the days of scratching your
+                      head and wondering where your money went – our magical app
+                      is here to help you track your transactions effortlessly
+                      and save the day ! It's like having a money-tracking
+                      superhero in your pocket. Take control of your money and
+                      embrace the financial adventure!
+                    </p>
+                    <p>
+                      In this team project I worked on Home Page using such
+                      technologies as React, Redux, Node.js, REST API, JS, AJAX,
+                      Webpack.
+                    </p>
+                    <button class="accordion">Click to see the images</button>
+                    <div class="panel">
+                      <ul class="experiences__company-project-imagesBlock">
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/wallet-app1.png"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/wallet-app2.png"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                        <li class="experiences__company-project-images-item">
+                          <img
+                            class="experiences__company-project-images"
+                            src="assets/wallet-app3.png"
+                            alt="Photo of the app"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="resume__block">
+            <div class="additional-info">
+              <div class="additional-info__education">
+                <h3 class="additional-info__education-header">Education</h3>
+                <div class="additional-info__education-university">
+                  <span class="additional-info__education-university-durability"
+                    >2022-2023</span
+                  >
+                  <h3 class="additional-info__education-university-speciality">
+                    Full stack developer
+                  </h3>
+                  <p class="additional-info__education-university-name">
+                    IT School GoIT
+                  </p>
+                </div>
+                <div class="additional-info__education-university">
+                  <span class="additional-info__education-university-durability"
+                    >2015-2020</span
+                  >
+                  <h3 class="additional-info__education-university-speciality">
+                    Program subject area "Law"(Master's degree)
+                  </h3>
+                  <p class="additional-info__education-university-name">
+                    National University "Odesa Law Academy"
+                  </p>
+                </div>
+              </div>
+
+              <div class="additional-info__languages">
+                <h3 class="additional-info__languages-header">Languages</h3>
+                <p class="additional-info__languages-item">
+                  <span>Ukrainian (Native)</span>
+                  <iframe
+                    src="https://giphy.com/embed/numl5Dn484drLUhCQj"
+                    width="30"
+                    height="30"
+                    frameborder="0"
+                    class="giphy-embed"
+                    allowfullscreen
+                  ></iframe>
+                </p>
+                <p class="additional-info__languages-item">
+                  <span>English (Upper-Intermediate)</span>
+                  <iframe
+                    src="https://giphy.com/embed/LqrAjDloJSuqxKdQfr"
+                    width="30"
+                    height="30"
+                    frameborder="0"
+                    class="giphy-embed"
+                    allowfullscreen
+                  ></iframe>
+                </p>
+                <p class="additional-info__languages-item">
+                  <span>Russian (Try to forget)</span> 🤮
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="resume__block">
+            <div class="hobbies">
+              <h3 class="hobbies__header">My hobbies</h3>
+              <div class="hobbies_info_container">
+                <div class="hobbies_info__item">
+                  <p class="hobbies_info__description">
+                    Step right up and behold the marvelous medley of hobbies
+                    that I, a whimsical individual, engage in! Picture me,
+                    stitching away like an embroidery wizard, turning mere
+                    fabric into a tapestry of wonder. Watch as my needle dances
+                    across the canvas, bringing life to threads in a way that
+                    would make even the most skilled spider jealous!
+                  </p>
+                  <div
+                    style="
+                      width: 100%;
+                      height: 0;
+                      padding-bottom: 75%;
+                      position: relative;
+                    "
+                  >
+                    <iframe
+                      src="https://giphy.com/embed/IdNTmmwfiw85n9ancv"
+                      width="100%"
+                      height="100%"
+                      style="position: absolute"
+                      frameborder="0"
+                      class="giphy-embed"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="hobbies_info__item">
+                  <p class="hobbies_info__description">
+                    But wait, the fun doesn't stop there! I'm wielding dice,
+                    cards, and a mischievous grin as I conquer the board game
+                    realm. From strategic conquests to hilarious mishaps, I'm
+                    always ready to outwit and outroll my opponents, making game
+                    nights legendary.
+                  </p>
+                  <div style="width: 100%">
+                    <div
+                      style="
+                        height: 0;
+                        padding-bottom: 56.25%;
+                        position: relative;
+                        width: 100%;
+                      "
+                    >
+                      <iframe
+                        allowfullscreen=""
+                        frameborder="0"
+                        height="100%"
+                        src="https://giphy.com/embed/P6trDNTPCVBuH9clMl/video"
+                        style="left: 0; position: absolute; top: 0"
+                        width="100%"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hobbies_info__item">
+                  <p class="hobbies_info__description">
+                    And then, the coding arena calls my name, and I don my
+                    coding cape with JavaScript as my trusty sidekick. With
+                    lines of code and a sprinkle of magic, I create digital
+                    marvels that dance across screens, delivering functionality
+                    and a touch of whimsy.
+                  </p>
+                  <div
+                    style="
+                      width: 100%;
+                      height: 0;
+                      padding-bottom: 75%;
+                      position: relative;
+                    "
+                  >
+                    <iframe
+                      src="https://giphy.com/embed/LHZyixOnHwDDy"
+                      width="100%"
+                      height="100%"
+                      style="position: absolute"
+                      frameborder="0"
+                      class="giphy-embed"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="hobbies_info__item">
+                  <p class="hobbies_info__description">
+                    Oh, and let's not forget the power of books! I'm like a
+                    literary superhero, diving into captivating worlds,
+                    unleashing imagination, and emerging with newfound wisdom
+                    and stories to share.
+                  </p>
+                  <div
+                    style="
+                      width: 100%;
+                      height: 0;
+                      padding-bottom: 75%;
+                      position: relative;
+                    "
+                  >
+                    <iframe
+                      src="https://giphy.com/embed/1TKqXWt519Av4cuZoc"
+                      width="100%"
+                      height="100%"
+                      style="position: absolute"
+                      frameborder="0"
+                      class="giphy-embed"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="hobbies_info__item">
+                  <p class="hobbies_info__description">
+                    So, buckle up, my friend, as we embark on this wondrous
+                    journey of creativity, strategy, and endless curiosity. With
+                    a needle in one hand, dice in the other, and a keyboard at
+                    my fingertips, I'm ready to take on the world, one stitch,
+                    roll, and line of code at a time. Let the adventure begin!
+                  </p>
+                  <div style="width: 100%">
+                    <div
+                      style="
+                        height: 0;
+                        padding-bottom: 75%;
+                        position: relative;
+                        width: 100%;
+                      "
+                    >
+                      <iframe
+                        allowfullscreen=""
+                        frameborder="0"
+                        height="100%"
+                        src="https://giphy.com/embed/ATyFnIcP0iOJjDiOql/video"
+                        style="left: 0; position: absolute; top: 0"
+                        width="100%"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button_wrapper">
+          <button class="confetti_button">
+            Oh, have you read all of this?🎉
+          </button>
+        </div>
+      </div>
+      <div class="progress_bar" />
+      <button class="back_to_top hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="back_to_top_icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 11l5-5m0 0l5 5m-5-5v12"
+          />
+        </svg>
+      </button>
+      <div class="progress_bar" />
+    </main>
+
+    <script src="./js/accordion.js" defer></script>
+    <script src="./js/confetti.js"></script>
+    <script src="./js/scrollToTop.js"></script>
   </body>
 </html>

@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -11,10 +14,10 @@ body {
 
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
+  --durability-text-color: #858282f2;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #f8ceed;
+  --text-decoration-color: #cc8fe3;
 }
 
 .container {
@@ -38,7 +41,7 @@ body {
 .resume {
   margin: 50px auto;
   border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  box-shadow: 1px 1px 7px 7px var(--border-color);
   padding: 30px 0;
   max-width: 900px;
 }
@@ -47,6 +50,67 @@ body {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .fh {
+    display: flex;
+    flex-direction: column;
+  }
+  .resume {
+    width: 300px;
+    max-width: 700px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .contact_info_container {
+    align-items: center;
+  }
+  .contact-info__block--center {
+    margin: 0 auto;
+  }
+  .contact-info__avatar {
+    height: 250px;
+    width: 200px;
+  }
+  .contact-info__block {
+    min-width: 235px;
+  }
+  .contact-info__block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .intro__icon-wrapper {
+    margin-right: 5px;
+  }
+  .skills_info_item {
+    font-size: 0.9rem;
+  }
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .additional-info__education-header {
+    text-align: center;
+  }
+  .additional-info__languages {
+    margin: 0 auto;
+  }
+  .additional-info__languages-header {
+    text-align: center;
+  }
+  .additional-info__education {
+    margin: 0 auto;
+  }
+  .additional-info__education-university-speciality {
+    font-size: 0.9rem;
+  }
+  .hobbies_info__item {
+    width: 100%;
+  }
+  .additional-info__languages-item {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -59,12 +123,45 @@ body {
     align-items: center;
   }
 
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
   .experiences {
     margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .resume {
+    max-width: 700px;
+  }
+  .contact-info__block {
+    font-size: 0.9rem;
+  }
+  .additional-info__education-university-speciality {
+    font-size: 1rem;
+  }
+  .additional-info__languages-item {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-info__avatar {
+    height: 300px;
+    width: 250px;
+  }
+  .intro__icon-wrapper {
+    margin-right: 30px;
+  }
+  .experiences {
+    margin-right: 50px;
+  }
+  .additional-info__education-header {
+    text-align: left;
+  }
+
+  .additional-info__languages-header {
+    text-align: left;
+  }
+  .hobbies_info__item {
+    width: calc((100% - 80px) / 2);
   }
 }
 
@@ -89,7 +186,7 @@ body {
 .contact-info__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .contact-info__block--center {
@@ -101,6 +198,7 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -114,8 +212,14 @@ body {
   justify-content: center;
 }
 
+.contact-info__item-icon-wrapper:hover .contact-info__item-icon path {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f8b4ed;
+}
+
 .contact-info__item-icon path {
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-info__item-icon {
@@ -124,12 +228,19 @@ body {
 }
 
 .contact-info__avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 5%;
   object-fit: cover;
-  border: 3px solid;
+  border: 2px solid;
   border-color: var(--text-decoration-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.contact-info__avatar:hover {
+  cursor: pointer;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+@media screen and (max-width: 576px) {
 }
 
 /* intro and skills styles */
@@ -139,7 +250,6 @@ body {
 }
 
 .intro__icon-wrapper {
-  margin-right: 30px;
   width: 30px;
   display: flex;
   justify-content: center;
@@ -157,12 +267,42 @@ body {
 .intro_text {
   color: var(--secondary-text-color);
   text-align: justify;
+  text-indent: 10px;
+}
+.intro_text:first-child:first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
 }
 
 .skills__header {
   color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 15px;
+}
+.skills_info_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills_info_item_header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+.skills_info_item {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+  list-style: none;
+}
+
+.skills_info_item li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  color: var(--border-color);
 }
 
 .skills__text {
@@ -173,12 +313,13 @@ body {
 /* experience and additional info styles */
 .experiences {
   flex: 1 1 60%;
-  margin-right: 50px;
 }
-
+.experiences__company-project-link {
+  text-decoration: none;
+}
 .experiences__header {
   color: var(--secondary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -187,6 +328,8 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+  text-indent: 10px;
+  text-align: justify;
 }
 
 .experiences__company-header-name {
@@ -200,6 +343,8 @@ body {
 .experiences__company-project {
   margin-left: 15px;
   margin-bottom: 25px;
+  text-align: justify;
+  border-radius: 10px;
 }
 
 .experiences__company-project-role {
@@ -213,6 +358,33 @@ body {
   color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
+  width: 200px;
+}
+.experiences__company-project-description {
+  text-indent: 10px;
+  color: var(--secondary-text-color);
+}
+.experiences__company-project-description::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
+.experiences__company-project-description + p {
+  padding: 5px;
+  background-color: #cd8fe396;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.experiences__company-project-imagesBlock {
+  list-style: none;
+}
+.experiences__company-project-images-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.experiences__company-project-images {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .experiences__company-project-responsibilities {
@@ -221,7 +393,11 @@ body {
 }
 
 .additional-info {
+  display: flex;
   flex: 1 1 40%;
+  justify-content: space-around;
+  align-items: baseline;
+  padding-top: 15px;
 }
 
 .additional-info__education {
@@ -230,8 +406,10 @@ body {
 
 .additional-info__education-header {
   color: var(--secondary-text-color);
-  text-align: left;
   margin-bottom: 20px;
+}
+.additional-info__education-university {
+  margin-bottom: 10px;
 }
 
 .additional-info__education-university-durability {
@@ -257,10 +435,153 @@ body {
 
 .additional-info__languages-header {
   color: var(--secondary-text-color);
-  text-align: left;
   margin-bottom: 20px;
 }
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.additional-info__languages-item span {
+  margin-right: 5px;
+}
+.hobbies_info_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hobbies__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hobbies_info__item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hobbies_info__description {
+  max-width: 100%;
+  margin-right: 10px;
+  text-align: justify;
+  text-indent: 10px;
+  color: var(--secondary-text-color);
+  margin-bottom: 15px;
+}
+.hobbies_info__description::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  padding: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.confetti_button {
+  background-color: var(--text-decoration-color);
+  border-radius: 100px;
+  box-shadow: rgba(158, 44, 187, 0.2) 0 -25px 18px -14px inset,
+    rgba(51, 44, 187, 0.414) 0 1px 2px, rgba(96, 44, 187, 0.15) 0 2px 4px,
+    rgba(132, 44, 187, 0.15) 0 4px 8px, rgba(127, 44, 187, 0.15) 0 8px 16px,
+    rgba(151, 44, 187, 0.15) 0 16px 32px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.confetti_button:hover {
+  box-shadow: rgba(149, 44, 187, 0.889) 0 -25px 18px -14px inset,
+    rgba(149, 44, 187, 0.55) 0 1px 2px, rgba(149, 44, 187, 0.55) 0 2px 4px,
+    rgba(149, 44, 187, 0.55) 0 4px 8px, rgba(149, 44, 187, 0.55) 0 8px 16px,
+    rgba(149, 44, 187, 0.55) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.back_to_top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: var(--text-decoration-color);
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.back_to_top:hover {
+  opacity: 60%;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.back_to_top_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-text-color);
+}
+
+.progress_bar {
+  height: 1rem;
+  background: var(--border-color);
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
