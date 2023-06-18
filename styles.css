@@ -1,0 +1,620 @@
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+
+  --primary-text-color: #181820;
+  --secondary-text-color: #5c5c62;
+  --durability-text-color: #858282f2;
+  --icon-color: #6a737d;
+  --border-color: #f8ceed;
+  --text-decoration-color: #cc8fe3;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 900px;
+}
+
+.fh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resume {
+  margin: 50px auto;
+  border: 1px solid #f5f5f5;
+  box-shadow: 1px 1px 7px 7px var(--border-color);
+  padding: 30px 0;
+  max-width: 900px;
+}
+
+.resume-block {
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+@media (width >= 320px) and (width <= 767px) {
+  .fh {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume {
+    width: 300px;
+    max-width: 700px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .contact-info-container {
+    align-items: center;
+  }
+
+  .contact-info-block-first {
+    margin: 0 auto;
+  }
+
+  .contact-info-avatar {
+    height: 250px;
+    width: 200px;
+  }
+
+  .contact-info-block {
+    min-width: 235px;
+  }
+
+  .contact-info-block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .intro-icon-wrapper {
+    margin-right: 5px;
+  }
+
+  .skills-info-item {
+    font-size: 0.9rem;
+  }
+
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .additional-info-education-header {
+    text-align: center;
+  }
+
+  .additional-info-languages {
+    margin: 0 auto;
+  }
+
+  .additional-info-languages-header {
+    text-align: center;
+  }
+
+  .additional-info-education {
+    margin: 0 auto;
+  }
+
+  .additional-info-education-university-speciality {
+    font-size: 0.9rem;
+  }
+
+  .hobbies-info-item {
+    width: 100%;
+  }
+
+  .additional-info-languages-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (width <= 576px) {
+  .main-info,
+  .contact-info-container {
+    flex-direction: column;
+  }
+
+  .contact-info-container {
+    align-items: center;
+  }
+
+  .experiences {
+    margin-right: 0;
+  }
+}
+
+@media (width >= 768px) and (width <= 1023px) {
+  .resume {
+    max-width: 700px;
+  }
+
+  .contact-info-block {
+    font-size: 0.9rem;
+  }
+
+  .additional-info-education-university-speciality {
+    font-size: 1rem;
+  }
+
+  .additional-info-languages-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (width >= 768px) {
+  .contact-info-avatar {
+    height: 300px;
+    width: 250px;
+  }
+
+  .intro-icon-wrapper {
+    margin-right: 30px;
+  }
+
+  .experiences {
+    margin-right: 50px;
+  }
+
+  .additional-info-education-header {
+    text-align: left;
+  }
+
+  .additional-info-languages-header {
+    text-align: left;
+  }
+
+  .hobbies-info-item {
+    width: calc((100% - 80px) / 2);
+  }
+}
+
+/* contact info styles */
+.contact-info-header,
+.contact-info-sub-header {
+  text-align: center;
+}
+
+.contact-info-header {
+  color: var(--primary-text-color);
+  margin-bottom: 15px;
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+}
+
+.contact-info-sub-header {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info-block-first {
+  justify-content: center;
+}
+
+.contact-info-item {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact-info-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-info-item-icon-wrapper {
+  margin-right: 10px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-icon path {
+  fill: var(--text-decoration-color);
+}
+
+.contact-info-item-icon path {
+  fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info-item-icon-wrapper:hover .contact-info-item-icon path {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f8b4ed;
+}
+
+.contact-info-item-icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.contact-info-avatar {
+  border-radius: 5%;
+  object-fit: cover;
+  border: 2px solid;
+  border-color: var(--text-decoration-color);
+  box-shadow: rgba(0 0 0 / 25%) 0 54px 55px, rgba(0 0 0/ 12%) 0 -12px 30px,
+    rgba(0 0 0/ 12%) 0 4px 6px, rgba(0 0 0/ 17%) 0 12px 13px,
+    rgba(0 0 0/ 9%) 0 -3px 5px;
+}
+
+.contact-info-avatar:hover {
+  cursor: pointer;
+  box-shadow: rgb(38 57 77) 0 20px 30px -10px;
+}
+
+/* intro and skills styles */
+.intro {
+  display: flex;
+  justify-content: start;
+}
+
+.intro-icon-wrapper {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.intro-text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+  text-indent: 10px;
+}
+
+.intro-text:first-child::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
+
+.skills-header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills-info-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills-info-item-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.skills-info-item {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+  list-style: none;
+}
+
+.skills-info-item li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  color: var(--border-color);
+}
+
+/* experience and additional info styles */
+.experiences {
+  flex: 1 1 60%;
+}
+
+.experiences-company-project-link {
+  text-decoration: none;
+}
+
+.experiences-header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experiences-company-header-durability {
+  color: var(--durability-text-color);
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-indent: 10px;
+  text-align: justify;
+}
+
+/* .experiences__company-header-name {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+  text-align: left;
+  margin-bottom: 20px;
+} */
+
+.experiences-company-project {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  text-align: justify;
+  border-radius: 10px;
+}
+
+/* .experiences-company-project-role {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+} */
+
+.experiences-company-project-name {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.experiences-company-project-description {
+  text-indent: 10px;
+  color: var(--secondary-text-color);
+}
+
+.experiences-company-project-description::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
+
+.experiences-company-project-description + p {
+  padding: 5px;
+  background-color: #cd8fe396;
+  box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
+}
+
+.experiences-company-project-images-block {
+  list-style: none;
+}
+
+.experiences-company-project-images-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.experiences-company-project-images {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.experiences-company-project-responsibilities {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
+
+.additional-info {
+  display: flex;
+  flex: 1 1 40%;
+  justify-content: space-around;
+  align-items: baseline;
+  padding-top: 15px;
+}
+
+.additional-info-education {
+  margin-bottom: 20px;
+}
+
+.additional-info-education-header {
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.additional-info-education-university {
+  margin-bottom: 10px;
+}
+
+.additional-info-education-university-durability {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.additional-info-education-university-speciality {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.additional-info-education-university-name {
+  color: var(--secondary-text-color);
+}
+
+.additional-info-languages {
+  margin-bottom: 20px;
+}
+
+.additional-info-languages-header {
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.additional-info-languages-item {
+  color: var(--secondary-text-color);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.additional-info-languages-item span {
+  margin-right: 5px;
+}
+
+.hobbies-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hobbies-header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hobbies-info-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hobbies-info-description {
+  max-width: 100%;
+  margin-right: 10px;
+  text-align: justify;
+  text-indent: 10px;
+  color: var(--secondary-text-color);
+  margin-bottom: 15px;
+}
+
+.hobbies-info-description::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-decoration-color);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  padding: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: rgb(0 0 0 / 10%) 0 20px 25px -5px,
+    rgb(0 0 0 / 4%) 0 10px 10px -5px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.confetti-button {
+  background-color: var(--text-decoration-color);
+  border-radius: 100px;
+  box-shadow: rgb(158 44 187 / 20%) 0 -25px 18px -14px inset,
+    rgb(51 44 187 / 41.4%) 0 1px 2px, rgb(96 44 187 / 15%) 0 2px 4px,
+    rgb(132 44 187 / 15%) 0 4px 8px, rgb(127 44 187 / 15%) 0 8px 16px,
+    rgb(151 44 187 / 15%) 0 16px 32px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.confetti-button:hover {
+  box-shadow: rgb(149 44 187 / 88.9%) 0 -25px 18px -14px inset,
+    rgb(149 44 187 / 55%) 0 1px 2px, rgb(149 44 187 / 55%) 0 2px 4px,
+    rgb(149 44 187 / 55%) 0 4px 8px, rgb(149 44 187 / 55%) 0 8px 16px,
+    rgb(149 44 187 / 55%) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: var(--text-decoration-color);
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.back-to-top:hover {
+  opacity: 0.6;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.back-to-top-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-text-color);
+}
+
+.progress-bar {
+  height: 1rem;
+  background: var(--border-color);
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
